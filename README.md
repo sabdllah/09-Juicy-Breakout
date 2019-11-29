@@ -1,2 +1,2 @@
 # 09-Juicy-Breakout
-This is my juicy breakout game
+To make my breakout game jucier, I added music, a background color, and a few particles. 
