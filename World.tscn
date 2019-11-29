@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ScriptsWorld.gd" type="Script" id=1]
 [ext_resource path="res://ScriptPaddle.gd" type="Script" id=2]
@@ -21,6 +21,15 @@ font_data = ExtResource( 6 )
 size = 18
 outline_color = Color( 0.733333, 0.823529, 0.0941176, 1 )
 font_data = ExtResource( 6 )
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0.254286, 0.954286 )
+colors = PoolColorArray( 0.0834186, 0.576025, 0.613281, 1, 0.062933, 0.391652, 0.609375, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="GradientTexture" id=8]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -198,3 +207,14 @@ custom_colors/font_color = Color( 0.827451, 0.831373, 0.117647, 1 )
 text = "Lives"
 align = 1
 script = ExtResource( 8 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -73.9998, 4.5 )
+scale = Vector2( 0.572754, 676 )
+texture = SubResource( 7 )
+normal_map = SubResource( 8 )
+centered = false
